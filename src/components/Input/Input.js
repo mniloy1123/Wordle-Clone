@@ -15,6 +15,7 @@ function Input() {
     >
       <label htmlFor='guess-input'>Enter guess:</label>
       <input
+        required
         id='guess-input'
         type='text'
         pattern='[a-zA-Z]{5}'
