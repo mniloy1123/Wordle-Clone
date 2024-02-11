@@ -3,13 +3,15 @@ import React from 'react';
 function Input() {
   const [guess, setGuess] = React.useState('');
 
+  function handleSumbit(event) {
+    event.preventDefault();
+    console.log(`guess: ${guess}`);
+    setGuess('');
+  }
+
   return (
     <form className="guess-input-wrapper"
-      onSubmit={(event) => {
-        event.preventDefault();
-        console.log(`guess: ${guess}`);
-        setGuess('');
-      }}
+      onSubmit={handleSumbit}
     >
       <label htmlFor='guess-input'>Enter guess:</label>
       <input
