@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Input() {
+function Input({ handleSubmitGuess }) {
   const [guess, setGuess] = React.useState('');
 
   function handleSumbit(event) {
     event.preventDefault();
-    console.log(`guess: ${guess}`);
+    // console.log(`guess: ${guess}`);
+    handleSubmitGuess(guess);
     setGuess('');
   }
 
